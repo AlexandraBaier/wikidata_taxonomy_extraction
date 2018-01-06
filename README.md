@@ -25,7 +25,7 @@ A Wikidata entity *X* is a class, if it is an item (ID starts with Q) and at lea
 
 ## Installation
 
-TODO
+``pip install git+https://github.com/AlexBaier/wikidata_taxonomy_extraction.git``
 
 ## Script
 usage: ``extract-wd-taxonomy [-h] [-f] [-v] dump``
