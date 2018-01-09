@@ -23,8 +23,6 @@ setuptools.setup(
     zip_safe=False,
     install_requires=[
     ],
-    test_suite='nose.collector',
-    tests_require=['nose'],
     entry_points={
         'console_scripts': ['extract-wd-taxonomy=wikidata_taxonomy_extraction.__main__:main']
     }

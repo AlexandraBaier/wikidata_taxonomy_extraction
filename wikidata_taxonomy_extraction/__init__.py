@@ -50,20 +50,8 @@ def extract_taxonomy_graph(str_entities: typ.Iterable[str]) -> typ.Tuple[typ.Set
     return nodes, edges
 
 
-def filter_by_ids(str_entities: typ.Iterable[str], entity_ids: typ.Set[str]) -> typ.Iterable[str]:
-    return filter(lambda s: extract_id(s) in entity_ids, str_entities)
-
-
 def is_item(str_entity: str) -> bool:
     return '"id":"Q' in str_entity
-
-
-def extract_id(str_entity: str) -> str:
-    extr_id = None
-    match = re.match(r'.*"id":"([Q|P]\d+)".*', str_entity)
-    if match is not None:
-        extr_id = match.group(1)
-    return extr_id
 
 
 def get_subclass_of(entity: typ.Dict) -> typ.Set[str]:
